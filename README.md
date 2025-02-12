@@ -25,6 +25,10 @@ Query stored JSON payloads using key-value filters.
 
 Here I have used `gin` framework for implementations of REST API web server. For database I have use `sqlite`. `main.go` will consist of gin server implementation. All implemetation of query and scan API are written in `handler.go`. `utils.go` will consist of implementation some commonly used functions. 
 
+## Few Assumptions
+- For all scan API hits , previous data will be deleted and reloaded as per the file list in request ( to prevent duplication for multiple hits )
+
+
 # Running a locally
 
 Make sure you have docker desktop installed and running and port 8080 is free (no other service using port 8080)
