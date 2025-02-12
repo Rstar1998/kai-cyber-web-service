@@ -1,0 +1,45 @@
+# Binaries
+*.exe
+*.o
+*.a
+*.so
+
+# Go build artifacts
+bin/
+build/
+_build/
+*.test
+
+# Dependency management (Go modules) - usually not needed
+# vendor/  # Go modules are downloaded automatically
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*~
+*.tmp
+
+# Logs and temporary files
+*.log
+tmp/
+temp/
+.cache
+__pycache__/ # If you have any Python in your project
+
+# Sensitive information - NEVER commit these
+config.yaml  # Or .json, .env, etc.  Use environment variables instead
+.env
+*.key
+*.pem
+
+# Docker-related (if you have Docker Compose files or other Docker-specific stuff)
+.dockerignore # Although this is specifically for Docker, it's good practice to include it here too.
+docker-compose.override.yml
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Testing related
+*.test

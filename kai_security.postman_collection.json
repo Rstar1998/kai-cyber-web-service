@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "b26e35a5-f32a-44ca-8857-9b768d68204f",
+		"name": "kai_security",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32644224"
+	},
+	"item": [
+		{
+			"name": "scan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"repo\": \"https://github.com/velancio/vulnerability_scans\",\n    \"fidles\": [\n        \"vulnscan1011.json\",\n        \"vulnscan1213.json\",\n        \"vulnscan15.json\",\n        \"vulnscan16.json\",\n        \"vulnscan18.json\",\n        \"vulnscan19.json\",\n        \"vulnscan456.json\",\n        \"vulnscan789.json\",\n        \"vulscan123.json\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/scan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"scan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "query",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"filters\": {\n        \"severity\": \"HIGH\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/query",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"query"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
